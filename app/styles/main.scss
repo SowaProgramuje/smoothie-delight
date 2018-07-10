@@ -51,7 +51,7 @@ body {
   justify-content: center;
 
   &__headline {
-    font-size: 6vmax;
+    font-size: 8vmax;
     margin: 0;
     margin-bottom: 1rem;
   }
@@ -88,7 +88,7 @@ body {
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 700;
-    color: black;
+    color: $colorBlack;
 
     &:visited, 
     &:active {
@@ -105,11 +105,13 @@ body {
   &__cta {
     font-size: 1.5rem;
   }
+
+  &__form {
+    margin-bottom: 0.5rem;
+  }
 }
 
 .teasers {
-
-
   &__teaser {
     max-width: 100%;
     height: auto;
@@ -127,6 +129,12 @@ body {
       height: 5px;
       background-color: $colorCornflowerLila;
       margin-top: 0.5rem;
+    }
   }
+}
+
+.usps {
+  &__icon {
+    max-height: 100px;
   }
 }
