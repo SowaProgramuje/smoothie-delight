@@ -5,10 +5,12 @@
 
 $colorBlack: #000000;
 $colorWhite: #ffffff;
-$colorAquaIsland: #acd1db;
-$colorBizarre: #edddde;
-$colorGeyser: #d7dde6;
-$colorPicasso: #ffec90;
+$colorCornflowerLila: #ffa6af;
+$colorPastelPink: #ffced3;
+$colorShadyLady: #a69ca6;
+
+// shadow variables
+$shadow-main-menu: 0px 5px 28px -2px $colorShadyLady;
 
 html {
   box-sizing: border-box;
@@ -65,7 +67,7 @@ body {
   position: fixed;
   width: 100%;
   background-color: $colorWhite;
-  box-shadow: 0px 5px 28px -2px rgba(166,156,166,1);
+  box-shadow: $shadow-main-menu;
 }
 
 .main-menu {
@@ -74,7 +76,6 @@ body {
   }
 
   &__list-item {
-    // display: inline;
     padding: 0.5rem 0;
     margin-right: 1rem;
 
@@ -93,5 +94,39 @@ body {
     &:active {
       color: balck;
     }
+  }
+}
+
+.newsletter {
+  background-color: $colorPastelPink;
+  display: flex;
+  flex-direction: column;
+
+  &__cta {
+    font-size: 1.5rem;
+  }
+}
+
+.teasers {
+
+
+  &__teaser {
+    max-width: 100%;
+    height: auto;
+  }
+
+  &__teaser-caption {
+    font-weight: 700;
+    font-size: 2rem;
+    margin: 0.5rem 0 2rem;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 70%;
+      height: 5px;
+      background-color: $colorCornflowerLila;
+      margin-top: 0.5rem;
+  }
   }
 }
