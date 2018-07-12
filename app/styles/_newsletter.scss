@@ -1,0 +1,16 @@
+@import '_breakpoints';
+@import '_colors';
+
+.newsletter {
+    background-color: $colorPastelPink;
+    display: flex;
+    flex-direction: column;
+  
+    &__cta {
+        font-size: 1.5rem;
+    }
+  
+    &__form {
+        margin-bottom: 0.5rem;
+    }
+}

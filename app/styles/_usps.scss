@@ -1,0 +1,13 @@
+@import '_breakpoints';
+@import '_colors';
+
+.usps {
+
+    @media #{$laptop} {
+        display: flex;
+    }
+  
+    &__icon {
+        max-height: 100px;
+    }
+}

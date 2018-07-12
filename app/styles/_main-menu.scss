@@ -1,0 +1,42 @@
+@import '_breakpoints';
+@import '_colors';
+
+.main-menu {
+
+    @media #{$laptop} {
+        display: flex;
+    }
+  
+    &__list {
+        list-style: none;
+  
+        @media #{$laptop} {
+            display: flex;
+        }
+    }
+  
+    &__list-item {
+        padding: 0.5rem 0;
+    
+        @media #{$laptop} {
+            display: inline-block;
+            margin-right: 1rem;
+    
+            &:last-child {
+            margin-right: 0;
+            }
+        }
+    }
+  
+    &__link {
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 700;
+        color: $colorBlack;
+    
+        &:visited, 
+        &:active {
+            color: balck;
+        }
+    }
+}

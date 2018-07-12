@@ -1,0 +1,29 @@
+@import '_breakpoints';
+@import '_colors';
+
+.teasers {
+
+    @media #{$laptop} {
+        display: flex;
+    }
+  
+    &__teaser {
+        max-width: 100%;
+        height: auto;
+    }
+  
+    &__teaser-caption {
+        font-weight: 700;
+        font-size: 2rem;
+        margin: 0.5rem 0 2rem;
+    
+        &::after {
+            content: '';
+            display: block;
+            width: 70%;
+            height: 5px;
+            background-color: $colorCornflowerLila;
+            margin-top: 0.5rem;
+        }
+    }
+  }

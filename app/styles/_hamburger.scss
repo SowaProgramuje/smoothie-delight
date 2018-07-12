@@ -1,0 +1,18 @@
+@import '_breakpoints';
+@import '_colors';
+
+.hamburger {
+    width: 30px;
+    height: 30px;
+  
+    @media #{$laptop} {
+        display: none;
+    }
+  
+    &__dash {
+        display: inline-block;
+        width: 20px;
+        height: 4px;
+        background-color: $colorCornflowerLila;
+    }
+}

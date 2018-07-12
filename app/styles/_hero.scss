@@ -1,0 +1,25 @@
+@import '_breakpoints';
+@import '_colors';
+
+.hero {
+    width: 100vw;
+    height: 100vh;
+    background: center no-repeat url(../images/hero-image.jpg);
+    background-size: cover;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+  
+    &__headline {
+        font-size: 8vmax;
+        margin: 0;
+        margin-bottom: 1rem;
+    }
+  
+    &__lead {
+        font-size: 3vmax;
+        margin: 0;
+        margin-bottom: 0.5rem;
+    }
+  }

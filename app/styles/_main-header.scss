@@ -1,0 +1,15 @@
+@import '_breakpoints';
+@import '_colors';
+@import '_utils';
+
+.main-header {
+    position: fixed;
+    width: 70%;
+    background-color: $colorWhite;
+    box-shadow: $shadow-main-menu;
+  
+    @media #{$laptop} {
+        width: 100%;
+        display: flex;
+    }
+}
