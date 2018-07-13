@@ -1,18 +1,14 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Roboto:400,400i');
-@import '_container';
-@import '_hero';
-@import '_footer';
-@import '_hamburger';
-@import '_hero';
-@import '_logo';
-@import '_main-header';
-@import '_main-menu';
-@import '_newsletter';
-@import '_teasers';
-@import '_usps';
-@import '_utils';
+/**
+ * Import fonts varables
+ */
 
-html {
+@import '_fonts';
+
+/**
+ * Box sizing declaration for the whole document
+ */
+
+ html {
     box-sizing: border-box;
 }
 
@@ -22,5 +18,24 @@ html {
 
 body {
     margin: 0;
-    font-family: 'Montserrat', sans-serif;
+    font-family: $main-font-family;
 }
+
+/**
+ * Import all component's styles
+ */
+
+@import '_button';
+@import '_container';
+@import '_hero';
+@import '_footer';
+@import '_hamburger';
+@import '_hero';
+@import '_input';
+@import '_logo';
+@import '_main-header';
+@import '_main-menu';
+@import '_newsletter';
+@import '_teasers';
+@import '_usps';
+@import '_utils';

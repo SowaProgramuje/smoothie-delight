@@ -2,19 +2,24 @@
 @import '_colors';
 
 .teasers {
-
     @media #{$laptop} {
         display: flex;
+    }
+
+    &__teaser-wrapper {
+        margin: 1rem 0;
     }
   
     &__teaser {
         max-width: 100%;
         height: auto;
+        margin-bottom: 1rem;
     }
   
     &__teaser-caption {
         font-weight: 700;
         font-size: 2rem;
+        margin-bottom: 3rem;
     
         &::after {
             content: '';

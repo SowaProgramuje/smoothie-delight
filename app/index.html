@@ -72,12 +72,15 @@
       <section class="newsletter" id="newsletter-section">
         <div class="newsletter__wrapper | container">
           <h2 class="newsletter__cta">
-            Join our <strong>mailing list</strong>, so you can get juicy product updates.
+            Join our <strong>mailing list</strong>, so you can get juicy updates.
           </h2>
           <form class="newsletter__form" action="" method="post">
+            <label class="newsletter__label | sr-only" for="newsletter-name-input">Name:</label>
+            <input class="newsletter__input | input" placeholder="Name" type="text" id="newsletter-name-input" name="newsletter-name-input">
             <label class="newsletter__label | sr-only" for="newsletter-mail-input">Email:</label>
-            <input class="newsletter__input" type="email" id="newsletter-mail-input" name="newsletter-mail-input">
-            <button class="newsletter__button" type="submit">Submit</button>
+            <input class="newsletter__input | input" placeholder="Your email" type="email" id="newsletter-mail-input" name="newsletter-mail-input">
+            <br/>
+            <button class="newsletter__button | button" type="submit">Subscribe</button>
           </form>
         </div>
       </section>
