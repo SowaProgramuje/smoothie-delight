@@ -3,6 +3,8 @@
 @import '_utils';
 
 .main-header {
+    display: none;
+
     position: fixed;
     width: 70%;
     background-color: $colorWhite;
@@ -10,6 +12,10 @@
   
     @media #{$laptop} {
         width: 100%;
+        display: flex;
+    }
+
+    &--active {
         display: flex;
     }
 }

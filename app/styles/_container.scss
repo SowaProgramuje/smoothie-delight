@@ -1,3 +1,16 @@
+/**
+ * Mixin for flexible containers declaration.
+ * Defines page container. This mixin makes sure that the content has always equal padding
+ * for mobile screens on both size of the device and the contnet doesn't extend above certain width and is always centered.
+ */
+ 
+ @mixin container($container-gutter, $max-width) {
+    padding-left: $container-gutter;
+    padding-right: $container-gutter;
+    max-width: $max-width;
+    margin: 0 auto;
+}
+
 .container {
-    padding: 0 5vw;
+    @include container(15px, 1200px);
 }

@@ -1,0 +1,12 @@
+/**
+ * Mixin for button declaration.
+ * Defines the basic styles for primary button look
+ */
+ 
+ @mixin button() {
+
+}
+
+.button {
+    @include button();
+}
