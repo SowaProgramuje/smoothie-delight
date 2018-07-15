@@ -13,8 +13,12 @@
     }
 
     &__wrapper {
+        margin-bottom: 2rem;
+
         @media #{$tablet} {
             flex: 0 0 30%;
+            padding-right: 1rem;
+            margin-bottom: 1rem;
         }
 
         @media #{$desktop} {

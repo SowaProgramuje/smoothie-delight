@@ -12,13 +12,14 @@
     justify-content: center;
   
     &__headline {
-        font-size: 7vmax;
+        font-size: 8vmax;
         margin: 0;
         margin-bottom: 1rem;
         width: 70%;
         
         @media #{$laptop} {
             width: 60%;
+            font-size: 7vmax;
         }
     }
   
