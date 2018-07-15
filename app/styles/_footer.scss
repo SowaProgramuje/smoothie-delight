@@ -2,5 +2,15 @@
 @import '_colors';
 
 .footer {
-    background: center repeat url(../images/pattern.jpg);
+    background-color: $colorMystic;
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+
+        @media #{$phone-lg} {
+            flex-direction: row;
+        }
+    }
 }

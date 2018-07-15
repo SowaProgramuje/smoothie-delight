@@ -1,18 +1,67 @@
 @import '_breakpoints';
 @import '_colors';
 
+$bar-width: 30px;
+$bar-height: 4px;
+$bar-spacing: 10px;
+$hamburger-transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+
 .hamburger {
-    width: 30px;
-    height: 30px;
+    $root: &;
+    width: $bar-width;
+	height: $bar-height + $bar-spacing*2;
+	cursor: pointer;
+    position: absolute;
   
     @media #{$laptop} {
         display: none;
     }
   
-    &__dash {
-        display: inline-block;
-        width: 20px;
-        height: 4px;
+    &__menu {
+        width: $bar-width;
+        height: $bar-height;
         background-color: $colorCornflowerLila;
+        transition: background-color 200ms ease-out;
+
+        &::after, 
+        &::before {
+            width: $bar-width;
+            height: $bar-height;
+            background-color: $colorCornflowerLila;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: $bar-spacing;
+            background: $colorCornflowerLila;
+            transition: $hamburger-transition;
+        }
+        
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: $bar-spacing;
+            background: $colorCornflowerLila;
+            transition: $hamburger-transition;
+        }
+    }
+
+    &--active {
+        #{$root}__menu {
+            background-color: transparent;
+
+            &::before {
+                bottom: 0;
+                transform: rotate(-45deg);
+            }
+
+            &::after {
+                top: 0;
+                transform: rotate(45deg);
+            }
+        }
     }
 }

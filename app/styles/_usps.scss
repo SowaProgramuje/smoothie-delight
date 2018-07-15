@@ -15,6 +15,12 @@
     &__wrapper {
         margin-bottom: 2rem;
 
+        @media (max-width: 768px) and (orientation: landscape) {
+            flex: 0 0 45%;
+            padding-right: 1rem;
+            margin-bottom: 1rem;
+        }
+
         @media #{$tablet} {
             flex: 0 0 30%;
             padding-right: 1rem;

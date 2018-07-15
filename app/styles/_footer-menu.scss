@@ -1,0 +1,21 @@
+@import '_breakpoints';
+@import '_colors';
+
+.footer-menu {
+    &__list {
+        list-style: none;
+        padding: 0 1rem 0 0;
+    }
+
+    &__link {
+        color: $colorBlack;
+        text-decoration: none;
+    
+        &:hover, 
+        &:visited, 
+        &:active {
+            color: $colorBlack;
+        }
+    }
+}
+

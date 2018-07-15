@@ -2,6 +2,8 @@
  * Import fonts varables
  */
 
+@import '_breakpoints';
+@import '_colors';
 @import '_fonts';
 
 /**
@@ -29,12 +31,13 @@ body {
 @import '_container';
 @import '_cta-section';
 @import '_hero';
+@import '_footer-menu';
 @import '_footer';
 @import '_hamburger';
+@import '_header';
 @import '_hero';
 @import '_input';
 @import '_logo';
-@import '_main-header';
 @import '_main-menu';
 @import '_newsletter';
 @import '_teasers';
