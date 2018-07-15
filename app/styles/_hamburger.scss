@@ -1,17 +1,28 @@
+/**
+ * Mixin for hamburger declaration.
+ * Defines the basic styles and animation timing functions
+ */
+
 @import '_breakpoints';
 @import '_colors';
 
 $bar-width: 30px;
 $bar-height: 4px;
 $bar-spacing: 10px;
-$hamburger-transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+$hamburger-transition: 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+$hamburger-transition-opposite: 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);
 
-.hamburger {
+@mixin hamburger($bar-width, $bar-height, $bar-spacing, $hamburger-transition, $hamburger-transition-opposite) {
     $root: &;
+
     width: $bar-width;
 	height: $bar-height + $bar-spacing*2;
 	cursor: pointer;
     position: absolute;
+    background-color: $colorWhite;
+    padding: 0.5rem;
+    box-sizing: content-box;
+    margin: auto;
   
     @media #{$laptop} {
         display: none;
@@ -21,13 +32,17 @@ $hamburger-transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transf
         width: $bar-width;
         height: $bar-height;
         background-color: $colorCornflowerLila;
-        transition: background-color 200ms ease-out;
+        position: relative;
+        transform: translateY($bar-spacing);
+        background: $colorCornflowerLila;
+        transition: all 0ms 300ms;
 
         &::after, 
         &::before {
             width: $bar-width;
             height: $bar-height;
             background-color: $colorCornflowerLila;
+            transition: $hamburger-transition;
         }
 
         &::before {
@@ -36,7 +51,7 @@ $hamburger-transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transf
             left: 0;
             bottom: $bar-spacing;
             background: $colorCornflowerLila;
-            transition: $hamburger-transition;
+            transition: bottom $hamburger-transition;
         }
         
         &::after {
@@ -45,7 +60,7 @@ $hamburger-transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transf
             left: 0;
             top: $bar-spacing;
             background: $colorCornflowerLila;
-            transition: $hamburger-transition;
+            transition: top $hamburger-transition;
         }
     }
 
@@ -56,12 +71,18 @@ $hamburger-transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transf
             &::before {
                 bottom: 0;
                 transform: rotate(-45deg);
+                transition: bottom $hamburger-transition-opposite;
             }
 
             &::after {
                 top: 0;
                 transform: rotate(45deg);
+                transition: top $hamburger-transition-opposite;
             }
         }
     }
+}
+
+.hamburger {
+    @include hamburger( $bar-width, $bar-height, $bar-spacing, $hamburger-transition, $hamburger-transition-opposite);
 }
