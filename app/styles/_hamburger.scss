@@ -9,14 +9,15 @@
 $bar-width: 30px;
 $bar-height: 4px;
 $bar-spacing: 10px;
-$hamburger-transition: 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
-$hamburger-transition-opposite: 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);
+$hamburger-animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+$hamburger-transition: 300ms 300ms $hamburger-animation-timing-function, transform 300ms $hamburger-animation-timing-function;
+$hamburger-transition-opposite: 300ms $hamburger-animation-timing-function, transform 300ms 300ms $hamburger-animation-timing-function;
 
 @mixin hamburger($bar-width, $bar-height, $bar-spacing, $hamburger-transition, $hamburger-transition-opposite) {
     $root: &;
 
     width: $bar-width;
-	height: $bar-height + $bar-spacing*2;
+	height: $bar-height + $bar-spacing * 2;
 	cursor: pointer;
     position: absolute;
     background-color: $colorWhite;
