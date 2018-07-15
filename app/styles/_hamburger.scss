@@ -6,13 +6,6 @@
 @import '_breakpoints';
 @import '_colors';
 
-$bar-width: 30px;
-$bar-height: 4px;
-$bar-spacing: 10px;
-$hamburger-animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
-$hamburger-transition: 300ms 300ms $hamburger-animation-timing-function, transform 300ms $hamburger-animation-timing-function;
-$hamburger-transition-opposite: 300ms $hamburger-animation-timing-function, transform 300ms 300ms $hamburger-animation-timing-function;
-
 @mixin hamburger($bar-width, $bar-height, $bar-spacing, $hamburger-transition, $hamburger-transition-opposite) {
     $root: &;
 
@@ -83,6 +76,22 @@ $hamburger-transition-opposite: 300ms $hamburger-animation-timing-function, tran
         }
     }
 }
+
+
+/**
+ * Variables for hamburder icon
+ */
+ 
+ $bar-width: 30px;
+ $bar-height: 4px;
+ $bar-spacing: 10px;
+ $hamburger-animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+ $hamburger-transition: 300ms 300ms $hamburger-animation-timing-function, transform 300ms $hamburger-animation-timing-function;
+ $hamburger-transition-opposite: 300ms $hamburger-animation-timing-function, transform 300ms 300ms $hamburger-animation-timing-function;
+
+ /**
+ * Hamburger class declaration
+ */
 
 .hamburger {
     @include hamburger( $bar-width, $bar-height, $bar-spacing, $hamburger-transition, $hamburger-transition-opposite);
