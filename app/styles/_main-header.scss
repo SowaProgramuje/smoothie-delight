@@ -5,6 +5,7 @@
 .main-header {
     display: none;
 
+    z-index: 100;
     position: fixed;
     width: 70%;
     background-color: $colorWhite;
