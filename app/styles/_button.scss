@@ -16,6 +16,8 @@
 @import '_colors';
 
 .button {
+    $root: &;
+
     font-family: $main-font-family;
     font-size: 1rem;
     padding: 0.5rem 3rem;
@@ -31,6 +33,10 @@
 
     &:hover {
         background-color: darken($colorMystic, 10%);
+
+        // #{$root}::after {
+        //     right: 17px;
+        // }
     }
 
     &::after {
@@ -40,6 +46,6 @@
         position: absolute;
         top: 1px;
         right: 15px;
-        transition: opacity 200ms ease-out;
+        transition: right 200ms ease-out;
     }
 }

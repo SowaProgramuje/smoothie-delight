@@ -1,10 +1,11 @@
 const hamburgerIcon = document.querySelector('#hamburger');
-const header = document.querySelector('#header');
+const mainMenu = document.querySelector('#main-menu');
 
 (function toggleHamburger() {
-    console.log(hamburgerIcon);
-    hamburgerIcon.addEventListener('click', function() {
-        this.classList.toggle('hamburger--active');
-        header.toggle('header--active');
-    })
+    if (typeof(hamburgerIcon) != 'undefined' &&  hamburgerIcon != null) {
+        hamburgerIcon.addEventListener('click', function() {
+            this.classList.toggle('hamburger--active');
+            mainMenu.classList.toggle('main-menu--active');
+        })
+    }
 })();

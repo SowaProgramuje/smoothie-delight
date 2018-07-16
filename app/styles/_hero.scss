@@ -4,13 +4,16 @@
 .hero {
     width: 100%;
     height: 100vh;
-    min-height: 800px;
     background: center no-repeat url(../images/hero-image.jpg);
     background-size: cover;
     display: flex;
     align-items: flex-start;
     flex-direction: column;
     justify-content: center;
+
+    @media #{$laptop} {
+        min-height: 800px;
+    }
   
     &__headline {
         font-size: 8vmax;

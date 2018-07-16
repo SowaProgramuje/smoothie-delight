@@ -1,14 +1,33 @@
 @import '_breakpoints';
 @import '_colors';
+@import '_utils.scss';
 
 .main-menu {
+    position: absolute;
+    background-color: #fff;
+    left: 0;
+    padding: 1rem;
+    width: 80%;
+    height: 100vh;
+    transform: translate(-100%);
+    transition: transform 300ms ease-in-out;
+
+    &--active {
+        transform: translate(0);
+    }
 
     @media #{$laptop} {
         display: flex;
+        position: static;
+        padding: 0;
+        height: auto;
+        width: auto;
+        transform: unset;
     }
   
     &__list {
         list-style: none;
+        padding: 0;
   
         @media #{$laptop} {
             display: flex;
@@ -17,10 +36,12 @@
   
     &__list-item {
         padding: 0.5rem 0;
+        font-size: 1.5rem;
     
         @media #{$laptop} {
             display: inline-block;
             margin-right: 1rem;
+            font-size: 1rem;
     
             &:last-child {
                 margin-right: 0;
