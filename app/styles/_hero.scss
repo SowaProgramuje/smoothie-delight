@@ -25,6 +25,10 @@
             width: 60%;
             font-size: 7vmax;
         }
+
+        @media #{$desktop} {
+            font-size: 5vmax;
+        }
     }
   
     &__lead {
@@ -35,6 +39,10 @@
 
         @media #{$laptop} {
             width: 60%;
+        }
+
+        @media #{$laptop} {
+            font-size: 3vmax;
         }
     }
 }

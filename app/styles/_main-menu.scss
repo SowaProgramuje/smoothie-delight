@@ -4,7 +4,7 @@
 
 .main-menu {
     position: absolute;
-    background-color: #fff;
+    background-color: $colorWhite;
     left: 0;
     padding: 1rem;
     width: 80%;
@@ -14,6 +14,10 @@
 
     &--active {
         transform: translate(0);
+    }
+
+    @media #{$tablet} {
+        width: 60%;
     }
 
     @media #{$laptop} {
@@ -28,9 +32,11 @@
     &__list {
         list-style: none;
         padding: 0;
+        margin-top: 0;
   
         @media #{$laptop} {
             display: flex;
+            margin-top: 1rem;
         }
     }
   
