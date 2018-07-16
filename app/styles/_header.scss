@@ -1,0 +1,39 @@
+@import '_breakpoints';
+@import '_colors';
+@import '_utils';
+
+.header {
+    z-index: 100;
+    position: fixed;
+    width: 100%;
+    background-color: $colorWhite;
+    box-shadow: $shadow-main-menu;
+    padding: 0.5rem;
+    
+
+    @media #{$laptop} {
+        padding: 0;
+    }
+
+    &__container {
+        @media #{$laptop} {
+            display: flex;
+            justify-content: space-between;
+            padding: $container-gutter;
+            max-width: $container-max-width;
+            margin: 0 auto;
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+    }
+
+    &__main-link {
+        padding-top: 0.5rem;
+    }
+
+    &--active {
+        display: flex;
+    }
+}
+
+// TO DO add styles for mobile menu and animation

@@ -1,0 +1,38 @@
+@import '_breakpoints';
+@import '_colors';
+
+.usps {
+    &__headline {
+        font-size: 2rem;
+    }
+
+    &__container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    &__wrapper {
+        margin-bottom: 2rem;
+
+        @media (max-width: 768px) and (orientation: landscape) {
+            flex: 0 0 45%;
+            padding-right: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        @media #{$tablet} {
+            flex: 0 0 30%;
+            padding-right: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        @media #{$desktop} {
+            flex: 1 0 12%;
+        }
+    }
+  
+    &__icon {
+        max-height: 100px;
+    }
+}

@@ -1,0 +1,103 @@
+/**
+ * Mixin for hamburger declaration.
+ * Defines the basic styles and animation timing functions
+ */
+
+@import '_breakpoints';
+@import '_colors';
+
+@mixin hamburger($bar-width, $bar-height, $bar-spacing, $hamburger-transition, $hamburger-transition-opposite) {
+    $root: &;
+
+    width: $bar-width;
+	height: $bar-height + $bar-spacing * 2;
+	cursor: pointer;
+    position: absolute;
+    background-color: $colorWhite;
+    padding: 0.7rem;
+    box-sizing: content-box;
+    margin: auto;
+    top: 0;
+    right: 0;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+
+    @media #{$laptop} {
+        display: none;
+    }
+  
+    &__menu {
+        width: $bar-width;
+        height: $bar-height;
+        background-color: $colorCornflowerLila;
+        position: relative;
+        transform: translateY($bar-spacing);
+        background: $colorCornflowerLila;
+        transition: all 0ms 300ms;
+
+        &::after, 
+        &::before {
+            width: $bar-width;
+            height: $bar-height;
+            background-color: $colorCornflowerLila;
+            transition: $hamburger-transition;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: $bar-spacing;
+            background: $colorCornflowerLila;
+            transition: bottom $hamburger-transition;
+        }
+        
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: $bar-spacing;
+            background: $colorCornflowerLila;
+            transition: top $hamburger-transition;
+        }
+    }
+
+    &--active {
+        #{$root}__menu {
+            background-color: transparent;
+
+            &::before {
+                bottom: 0;
+                transform: rotate(-45deg);
+                transition: bottom $hamburger-transition-opposite;
+            }
+
+            &::after {
+                top: 0;
+                transform: rotate(45deg);
+                transition: top $hamburger-transition-opposite;
+            }
+        }
+    }
+}
+
+
+/**
+ * Variables for hamburder icon
+ */
+ 
+ $bar-width: 25px;
+ $bar-height: 3px;
+ $bar-spacing: 8px;
+ $hamburger-animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+ $hamburger-transition: 300ms 300ms $hamburger-animation-timing-function, transform 300ms $hamburger-animation-timing-function;
+ $hamburger-transition-opposite: 300ms $hamburger-animation-timing-function, transform 300ms 300ms $hamburger-animation-timing-function;
+
+ /**
+ * Hamburger class declaration
+ */
+
+.hamburger {
+    @include hamburger( $bar-width, $bar-height, $bar-spacing, $hamburger-transition, $hamburger-transition-opposite);
+    top: 5px;
+}

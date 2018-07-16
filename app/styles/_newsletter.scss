@@ -1,0 +1,33 @@
+@import '_breakpoints';
+@import '_colors';
+
+.newsletter {
+    display: flex;
+    flex-direction: column;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    background-color: $colorPeachCream;
+    text-align: center;
+  
+    &__cta {
+        font-size: 1.5rem;
+        font-weight: 400;
+        margin-top: 0;
+    }
+  
+    &__form {
+        margin-bottom: 0.5rem;
+    }
+
+    &__input {
+        width: 90%;
+
+        @media #{$tablet} {
+            width: 70%;
+        }
+
+        @media #{$laptop} {
+            width: 60%;
+        }
+    }
+}

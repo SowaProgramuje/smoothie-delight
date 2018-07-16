@@ -1,0 +1,21 @@
+/**
+ * Utility classes and variables declaration
+ */
+
+// shadow variables
+$shadow-main-menu: 0px 5px 28px -2px $colorShadyLady;
+
+// main container parameters
+$container-gutter: 30px;
+$container-max-width: 1200px;
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+}

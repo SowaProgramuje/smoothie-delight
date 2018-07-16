@@ -1,0 +1,16 @@
+@import '_breakpoints';
+@import '_colors';
+
+.footer {
+    background-color: $colorMystic;
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+
+        @media #{$phone-lg} {
+            flex-direction: row;
+        }
+    }
+}

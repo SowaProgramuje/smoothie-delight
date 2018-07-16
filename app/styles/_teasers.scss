@@ -1,0 +1,53 @@
+@import '_breakpoints';
+@import '_colors';
+
+.teasers {
+
+    &__container {
+        flex-wrap: wrap;
+
+        @media #{$phone-lg} {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+    }
+
+    &__headline {
+        font-size: 2rem;
+    }
+
+    &__teaser-wrapper {
+        margin: 1rem 0;
+
+        @media #{$phone-lg} {
+            flex: 0 0 40%;
+        }
+
+        @media #{$tablet} {
+            flex: 1 0 20%;
+            padding: 0 1.5rem 0 0;
+        }
+    }
+  
+    &__teaser {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 1rem;
+    }
+  
+    &__teaser-caption {
+        font-weight: 700;
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+    
+        &::after {
+            content: '';
+            display: block;
+            width: 70%;
+            height: 5px;
+            background-color: $colorCornflowerLila;
+            margin-top: 0.5rem;
+        }
+    }
+}

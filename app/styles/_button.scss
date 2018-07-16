@@ -1,0 +1,39 @@
+/**
+ * Mixin for button declaration.
+ * Defines the basic styles for primary button look
+ */
+ 
+// TODO create button mixin
+
+@import '_colors';
+
+.button {
+    $root: &;
+
+    font-family: $main-font-family;
+    font-size: 1rem;
+    padding: 0.5rem 3rem;
+    border: 1px solid $colorBlack;
+    color: $colorBlack;
+    border-radius: 6px;
+    background-color: $colorMystic;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 6px 9px 25px -5px $colorDustyGray;
+    transition: background-color 200ms ease-out;
+    position: relative;
+
+    &:hover {
+        background-color: darken($colorMystic, 10%);
+    }
+
+    &::after {
+        content: '\203A';
+        font-size: 1.5rem;
+        margin-left: 0.5rem;
+        position: absolute;
+        top: 1px;
+        right: 15px;
+        transition: right 200ms ease-out;
+    }
+}

@@ -1,0 +1,11 @@
+@import '_breakpoints';
+
+.logo {
+    width: 30px;
+    height: auto;
+
+    @media #{$laptop} {
+        width: 50px;
+    }
+}
+  
