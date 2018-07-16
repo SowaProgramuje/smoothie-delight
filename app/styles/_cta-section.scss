@@ -1,3 +1,6 @@
+
+//TODO create cta mixin
+
 @import '_breakpoints';
 @import '_colors';
 
@@ -8,11 +11,3 @@
     background-size: cover;
     color: $colorWhite;
 }
-//TO DO create cta mixin
-// @mixin .cta-section ($background-image, $fontColor) {
-//     width: 100%;
-//     min-height: 300px;
-//     background: center no-repeat url(../images/smoothie-delight-cta1.jpg);
-//     background-size: cover;
-//     color: $colorWhite;
-// }
